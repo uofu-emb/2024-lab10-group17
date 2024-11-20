@@ -8,3 +8,8 @@ Using a 250 Ω resistor
  - When the LED is on: 121 mW
 - Busy:
  - At all times: 105 mW
+- Interrupt:
+ - At 1 KHz: 89 mW
+ - At 10 KHz: 90 mW
+ - At 100 KHz: 95 mW
+ - At 1 MHz: 103 mW

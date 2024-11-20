@@ -56,6 +56,13 @@ else()
 endif()
 
 # ====================================================================================
+if(DEFINED ENV{PICO_EXTRAS_PATH})
+    set(PICO_EXTRAS_PATH $ENV{PICO_EXTRAS_PATH})
+else()
+    # set(PICO_EXTRAS_PATH lib/pico-extras)
+    get_filename_component(PICO_EXTRAS_PATH "lib/pico-extras" ABSOLUTE)
+endif()
+
 cmake_minimum_required(VERSION 3.13)
 
 set(CMAKE_C_STANDARD 11)
@@ -73,6 +80,12 @@ include(${FREERTOS_PATH}/portable/ThirdParty/GCC/RP2040/FreeRTOS_Kernel_import.c
 
 # This sets up the unity library. They don't provide a library export, so it's defined locally.
 include(unity.cmake)
+
+# Pull in PICO SDK (must be before project)
+include(pico_sdk_import.cmake)
+
+# Include the Pico Extras library.
+include(pico_extras_import.cmake)
 
 # This defines your project name, you can name it anything you want.
 project(myproject C CXX ASM)
