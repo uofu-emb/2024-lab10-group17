@@ -69,4 +69,4 @@ pico_add_extra_outputs(busy_blink)
 
 add_custom_target(flash_sleep picotool load -f $<TARGET_FILE:sleep_blink> DEPENDS sleep_blink)
 add_custom_target(flash_thread picotool load -f $<TARGET_FILE:thread_blink> DEPENDS thread_blink)
-add_custom_target(flash_blink picotool load -f $<TARGET_FILE:busy_blink> DEPENDS busy_blink)
+add_custom_target(flash_busy picotool load -f $<TARGET_FILE:busy_blink> DEPENDS busy_blink)
