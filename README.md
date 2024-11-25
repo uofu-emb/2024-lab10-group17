@@ -19,3 +19,5 @@ Using a 250 Ω resistor
 # Dormant:
  - Before Dormant: 100 mW
  - After sleep: 4 mW
+
+ [![CMake](https://github.com/uofu-emb/2024-lab10-group17/actions/workflows/main.yml/badge.svg?branch=development)](https://github.com/uofu-emb/2024-lab10-group17/actions/workflows/main.yml)
